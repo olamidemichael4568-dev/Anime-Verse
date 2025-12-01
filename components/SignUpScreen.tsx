@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Screen, NavProps } from "../types";
 
@@ -67,7 +68,10 @@ export const SignUpScreen: React.FC<NavProps> = ({ onNavigate }) => {
       </div>
 
       <div className="px-4 py-3 mx-auto w-full max-w-[480px]">
-        <button className="flex w-full items-center justify-center rounded-xl bg-primary h-14 text-white text-base font-bold leading-normal shadow-lg shadow-primary/30 transition-transform active:scale-95 hover:bg-primary/90">
+        <button
+          onClick={() => onNavigate(Screen.Home)}
+          className="flex w-full items-center justify-center rounded-xl bg-primary h-14 text-white text-base font-bold leading-normal shadow-lg shadow-primary/30 transition-transform active:scale-95 hover:bg-primary/90"
+        >
           Create Account
         </button>
       </div>
@@ -93,7 +97,10 @@ export const SignUpScreen: React.FC<NavProps> = ({ onNavigate }) => {
       </div>
 
       <div className="px-4 py-3 mx-auto w-full max-w-[480px] flex flex-col gap-3">
-        <button className="flex w-full items-center justify-center gap-3 rounded-xl bg-zinc-200/50 dark:bg-zinc-800/50 h-14 text-zinc-900 dark:text-white text-base font-bold leading-normal border border-zinc-200 dark:border-zinc-700 transition-transform active:scale-95 hover:bg-zinc-200 dark:hover:bg-zinc-700">
+        <button
+          onClick={() => onNavigate(Screen.Home)}
+          className="flex w-full items-center justify-center gap-3 rounded-xl bg-zinc-200/50 dark:bg-zinc-800/50 h-14 text-zinc-900 dark:text-white text-base font-bold leading-normal border border-zinc-200 dark:border-zinc-700 transition-transform active:scale-95 hover:bg-zinc-200 dark:hover:bg-zinc-700"
+        >
           <img
             alt="Google logo"
             className="h-6 w-6"
@@ -101,7 +108,10 @@ export const SignUpScreen: React.FC<NavProps> = ({ onNavigate }) => {
           />
           Continue with Google
         </button>
-        <button className="flex w-full items-center justify-center gap-3 rounded-xl bg-zinc-900 dark:bg-zinc-50 h-14 text-white dark:text-black text-base font-bold leading-normal transition-transform active:scale-95 hover:opacity-90">
+        <button
+          onClick={() => onNavigate(Screen.Home)}
+          className="flex w-full items-center justify-center gap-3 rounded-xl bg-zinc-900 dark:bg-zinc-50 h-14 text-white dark:text-black text-base font-bold leading-normal transition-transform active:scale-95 hover:opacity-90"
+        >
           <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M13.66 3.657a2.522 2.522 0 0 1 2.455-1.564 2.52 2.52 0 0 1 2.453 1.56l.002.004c.732 2.375-.78 4.706-2.455 4.706s-3.189-2.33-2.455-4.706Zm-4.99 15.158c1.33.02 2.65-.33 3.77-1.15-1.258-1.3-2.118-2.9-2.27-4.58-.936.4-1.99.58-3.04.5-2.07-.15-3.88-1.2-5.02-2.93-.243.68-.37 1.4-.38 2.14 0 3.32 2.17 6.13 5.94 6.02Z M16.126 9.423c2.422 0 4.25-2.04 4.148-4.63-.1-2.6-2.02-4.708-4.44-4.708-2.42 0-4.25 2.04-4.14 4.63.1 2.602 2.02 4.708 4.43 4.708Z"></path>
           </svg>

@@ -1,3 +1,4 @@
+
 export enum Screen {
   OnboardingWelcome = 'OnboardingWelcome',
   OnboardingFeatures = 'OnboardingFeatures',
@@ -5,6 +6,7 @@ export enum Screen {
   WelcomeScreen = 'WelcomeScreen',
   SignUp = 'SignUp',
   Login = 'Login',
+  Home = 'Home',
 }
 
 export interface NavProps {

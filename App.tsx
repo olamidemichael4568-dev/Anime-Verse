@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Screen } from "./types";
 import { OnboardingWelcome } from "./components/OnboardingWelcome";
@@ -6,6 +7,7 @@ import { OnboardingAllSet } from "./components/OnboardingAllSet";
 import { WelcomeScreen } from "./components/WelcomeScreen";
 import { SignUpScreen } from "./components/SignUpScreen";
 import { LoginScreen } from "./components/LoginScreen";
+import { HomeScreen } from "./components/HomeScreen";
 
 const App: React.FC = () => {
   const [currentScreen, setCurrentScreen] = useState<Screen>(
@@ -32,6 +34,8 @@ const App: React.FC = () => {
         return <SignUpScreen onNavigate={navigate} />;
       case Screen.Login:
         return <LoginScreen onNavigate={navigate} />;
+      case Screen.Home:
+        return <HomeScreen onNavigate={navigate} />;
       default:
         return <OnboardingWelcome onNavigate={navigate} />;
     }

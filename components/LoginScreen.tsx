@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Screen, NavProps } from "../types";
 
@@ -89,7 +90,10 @@ export const LoginScreen: React.FC<NavProps> = ({ onNavigate }) => {
             </div>
 
             {/* Login Button */}
-            <button className="flex items-center justify-center w-full h-14 px-6 mt-6 rounded-lg bg-primary hover:bg-primary/90 active:bg-primary/80 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary shadow-lg shadow-primary/30 transition-transform active:scale-95">
+            <button
+              onClick={() => onNavigate(Screen.Home)}
+              className="flex items-center justify-center w-full h-14 px-6 mt-6 rounded-lg bg-primary hover:bg-primary/90 active:bg-primary/80 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary shadow-lg shadow-primary/30 transition-transform active:scale-95"
+            >
               <span className="text-white text-base font-bold tracking-wide">
                 Log In
               </span>
@@ -107,14 +111,20 @@ export const LoginScreen: React.FC<NavProps> = ({ onNavigate }) => {
 
           {/* Social Logins */}
           <div className="flex w-full max-w-sm justify-center gap-4">
-            <button className="flex items-center justify-center w-14 h-14 bg-[#301c27] rounded-lg hover:bg-[#452838] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary transition-transform active:scale-95">
+            <button
+              onClick={() => onNavigate(Screen.Home)}
+              className="flex items-center justify-center w-14 h-14 bg-[#301c27] rounded-lg hover:bg-[#452838] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary transition-transform active:scale-95"
+            >
               <img
                 alt="Google logo"
                 className="h-6 w-6"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcb-U3P7q6-gjNe_9Xrd2KsGmZLd_ZRbIFS4Di6997Zq79TJb2doCLQ3bClwkCNkOmBtih8Gxvf5iQac4fCWMmzXH8nLy6WdHDMngM98yxKId8SoasbzOmV__oOW7corAKVNMSm_PweZwOTp3-0BFTqpzNPUFMxYH3r445h92aNaAcNdalh1TLiwWgVeCv2cNxeNlX3NgSFPXypdkOQnE_jPbafYaO02Rb2GCXj7ohwzcPRusT7SycFKMLTvCWhqsxMaadCMMFkjI"
               />
             </button>
-            <button className="flex items-center justify-center w-14 h-14 bg-[#301c27] rounded-lg hover:bg-[#452838] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary transition-transform active:scale-95">
+            <button
+              onClick={() => onNavigate(Screen.Home)}
+              className="flex items-center justify-center w-14 h-14 bg-[#301c27] rounded-lg hover:bg-[#452838] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-dark focus:ring-primary transition-transform active:scale-95"
+            >
               <img
                 alt="Apple logo"
                 className="h-6 w-6 brightness-0 invert"
